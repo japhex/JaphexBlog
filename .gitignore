@@ -26,3 +26,5 @@ yarn-error.log*
 .idea/dictionaries/J.xml
 .idea/workspace.xml
 /**/*/.idea
+/**/*/.next
+frontend/.next/**/*
