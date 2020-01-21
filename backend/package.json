@@ -8,7 +8,7 @@
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi",
-    "build-images": "copyfiles \"public/uploads/*\" ../frontend/assets/images -f"
+    "build-images": "copyfiles \"public/uploads/*\" ../frontend/public/images -f"
   },
   "devDependencies": {},
   "dependencies": {
