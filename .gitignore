@@ -28,4 +28,4 @@ yarn-error.log*
 /**/*/.idea
 /**/*/.next
 frontend/.next/**/*
-/frontend/.next/
+/frontend/.next
