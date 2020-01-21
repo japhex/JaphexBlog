@@ -1,0 +1,39 @@
+{
+  "connection": "default",
+  "collectionName": "articles",
+  "info": {
+    "name": "Article"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "published_at": {
+      "type": "datetime"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "technology",
+        "music",
+        "coding"
+      ]
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "large",
+        "small",
+        "snapshot",
+        "quote"
+      ]
+    }
+  }
+}
