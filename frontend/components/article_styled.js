@@ -21,6 +21,7 @@ export const Header = styled.h1`
 	small {
 		font-size:1.2rem;
 		background:#fff;
+		letter-spacing: 0.3rem;
 	}
 `
 
