@@ -10,8 +10,8 @@ const ArticleType = () => {
 	return (
 		<QueryType query={ARTICLES_BY_TYPE_QUERY} type={router.query.type}>
 			{({ data: { articles } }) => (
-				articles.map(({title, published_at, content, size}) =>
-						<Article title={title} publishedAt={published_at} content={content} fullPage={true} size={getSize(size)} />
+				articles.map((article) =>
+						<Article {...article} />
 				)
 			)}
 		</QueryType>

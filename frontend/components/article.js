@@ -2,9 +2,11 @@ import React, { forwardRef } from 'react';
 import ReactMarkdown from 'react-markdown'
 import Moment from 'react-moment'
 import {ArticlePage, Header, Content} from './article_styled.js'
+import {getSize} from "../helpers/articles"
 
 const Article = forwardRef(({title, publishedAt, content, size, fullPage, onClick, href}, ref) =>  {
-	console.log(content)
+	content = !fullPage ? content.substring(0,150) : content
+
 	return (
 					<a href={href} onClick={onClick} ref={ref}>
 						<ArticlePage ref={ref}>

@@ -8,6 +8,7 @@ const ARTICLES_QUERY = gql`
             type
 	        	size
 	        	published_at
+	        	content
         }
     }
 `

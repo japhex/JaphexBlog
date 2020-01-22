@@ -16,9 +16,11 @@ export const Header = styled.h1`
 	justify-content: center;
 	font-weight:100;
 	font-size:46px;
+	background: #eee;
 	
 	small {
 		font-size:1.2rem;
+		background:#fff;
 	}
 `
 

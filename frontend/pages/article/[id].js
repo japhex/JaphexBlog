@@ -9,8 +9,8 @@ const ArticleSingle = () => {
 
 	return (
 		<Query query={ARTICLE_QUERY} id={router.query.id}>
-			{({ data: { article: {title, published_at, content, size} } }) => (
-					<Article title={title} publishedAt={published_at} content={content} fullPage={true} size={getSize(size)} />
+			{({ data: { article } }) => (
+					<Article {...article} fullPage />
 				)
 			}
 		</Query>
