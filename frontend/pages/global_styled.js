@@ -7,4 +7,5 @@ export const Html = styled.html`
 export const Main = styled.main`
   font-family: Helvetica;
   font-size:1rem;
+  margin-top: 187px;
 `

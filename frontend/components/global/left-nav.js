@@ -2,11 +2,8 @@ import React from "react"
 import Link from "next/link"
 import {LeftNavStyled, BlogLink} from './header_styled'
 
-const LeftNav = () => (
-	<LeftNavStyled>
-		<Link href="/">
-			<BlogLink>Home</BlogLink>
-		</Link>
+const LeftNav = ({lockHeader}) => (
+	<LeftNavStyled lockHeader={lockHeader}>
 		<Link href="/article/type/[type]" as={`/article/type/technology`}>
 			<BlogLink>Technology</BlogLink>
 		</Link>

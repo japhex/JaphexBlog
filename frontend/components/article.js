@@ -6,7 +6,7 @@ import {getSize} from "../helpers/articles"
 
 const Article = forwardRef(({title, published_at, content, size, fullPage, onClick, href}, ref) =>  {
 	content = !fullPage ? content.substring(0,150) : content
-	
+
 	return (
 		<a href={href} onClick={onClick} ref={ref}>
 			<ArticlePage fullPage={fullPage} ref={ref}>

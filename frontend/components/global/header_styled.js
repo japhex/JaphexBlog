@@ -4,27 +4,51 @@ export const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding:40px 0;
+  padding: ${({lockHeader}) => lockHeader ? '5px 0' : '40px 0'};
   border-bottom: 3px solid #cecece;
+  transition: padding 0.2s ease-in;
+  position: fixed;
+  left:0;
+  top:0;
+  width:100%;
+  background:#fff;
 `
 
 export const HeaderTitle = styled.h1`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1 1 0px;
 	font-family: 'Amatic SC', cursive;
-	font-weight:normal;
-	font-size:56px;
+	font-weight: normal;
+	font-size: ${({lockHeader}) => lockHeader ? '2.5rem' : '4rem'};
+	
+	a {
+		color:#000;
+		text-decoration: none;
+	}
 `
 
 export const LeftNavStyled = styled.div`
-	position: absolute;
-	top:10px;
-	left:10px;
+	display: flex;
+	flex: 1 1 0px;
+	padding-left:15px;
+	position: ${({lockHeader}) => lockHeader ? 'static' : 'absolute'};
+	transition: position 0.5s ease-in;
+	top:15px;
+	left:0;
 `
 
 export const RightNavStyled = styled.div`
-	position: absolute;
+	display:flex;
+	flex: 1 1 0px;
+	order: 3;
+	justify-content: flex-end;
+	padding-right:15px;
+	position: ${({lockHeader}) => lockHeader ? 'static' : 'absolute'};
+	transition: position 0.5s ease-in;
 	top:10px;
-	right:10px;
+	right:5px;
 `
 
 export const BlogLink = styled.a`
@@ -44,6 +68,12 @@ export const SocialIcons = styled.div`
 		
 		&:first-child {
 			margin-right:10px;
+		}
+	}
+	
+	a:last-child {
+		i {
+			margin-right:0;
 		}
 	}
 `

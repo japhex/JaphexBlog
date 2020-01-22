@@ -2,8 +2,8 @@ import React from "react"
 import {RightNavStyled, SocialIcons} from './header_styled'
 import {Icon} from "../utils/icons/icon"
 
-const RightNav = () => (
-	<RightNavStyled>
+const RightNav = ({lockHeader}) => (
+	<RightNavStyled lockHeader={lockHeader}>
 		<SocialIcons>
 			<a href="https://www.twitch.tv/bloodmagej" target="_blank">
 				<Icon id="TwitchIcon" iconWidth="5rem" iconHeight="5rem" />
