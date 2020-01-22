@@ -6,7 +6,7 @@ export const ArticlePage = styled.section`
 	align-items: center;
 	justify-content: center;
   width:100%;
-  cursor:pointer;
+  cursor:${({fullPage}) => fullPage ? 'unset' : 'pointer'};
 `
 
 export const Header = styled.h1`

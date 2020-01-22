@@ -8,21 +8,20 @@ const Article = forwardRef(({title, publishedAt, content, size, fullPage, onClic
 	content = !fullPage ? content.substring(0,150) : content
 
 	return (
-					<a href={href} onClick={onClick} ref={ref}>
-						<ArticlePage ref={ref}>
-							<Header>
-								{title}
-								<small>
-									<Moment format="Do MMM YYYY">{publishedAt}</Moment>
-								</small>
-							</Header>
-							<Content>
-								<ReactMarkdown escapeHtml={false} source={content} />
-							</Content>
-						</ArticlePage>
-					</a>
-			)
-		}
-)
+		<a href={href} onClick={onClick} ref={ref}>
+			<ArticlePage fullPage={fullPage} ref={ref}>
+				<Header>
+					{title}
+					<small>
+						<Moment format="Do MMM YYYY">{publishedAt}</Moment>
+					</small>
+				</Header>
+				<Content>
+					<ReactMarkdown escapeHtml={false} source={content} />
+				</Content>
+			</ArticlePage>
+		</a>
+	)
+})
 
 export default Article
