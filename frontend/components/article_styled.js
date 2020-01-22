@@ -24,7 +24,24 @@ export const Header = styled.h1`
 
 export const Content = styled.div`
 	font-family: 'Courier Prime', monospace;
-	max-width: 90rem;
 	font-size:1.5rem;
 	line-height:2.5rem;
+	
+	p {
+		max-width: 90rem;
+		
+		img {
+			max-width: 90rem;
+		}
+		
+		img[alt="cover image"] {
+			max-width:none;
+			margin-left: calc(50% - 50vw);
+	    margin-right: calc(50% - 50vw);
+	    width: 100vw;
+	    height: 250px;
+	    object-fit: cover;
+	    object-position: center;
+		}
+	}
 `
