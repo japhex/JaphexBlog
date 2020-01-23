@@ -5,10 +5,12 @@ const ARTICLE_QUERY = gql`
     article(id: $id) {
       id
       title
+      subTitle
       content
       type
       published_at
       size
+	    rating
     }
   }
 `;

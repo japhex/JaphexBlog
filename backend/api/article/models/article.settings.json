@@ -34,6 +34,12 @@
         "snapshot",
         "quote"
       ]
+    },
+    "rating": {
+      "type": "biginteger"
+    },
+    "subTitle": {
+      "type": "string"
     }
   }
 }

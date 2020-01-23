@@ -5,10 +5,12 @@ const ARTICLES_BY_TYPE_QUERY = gql`
     articles(where: { type: $type }) {
       id
       title
+      subTitle
       content
       type
       published_at
 	    size
+      rating
     }
   }
 `
